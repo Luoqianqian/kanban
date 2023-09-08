@@ -1,15 +1,13 @@
-import { useState } from 'react';
-import {Container, Row, Col } from 'react-bootstrap';
+import Events from './components/Events';
+import TaskBox from './components/TaskBox';
 
 function App() {
-
   return (
-    <Container>
-      <Row>
-        <Col>events</Col>
-        <Col>tasks</Col>
-      </Row>
-    </Container>
+    <div className=' container-fluid d-flex py-5 min-vh-100'>
+      <Events />
+      <TaskBox />
+    </div>
+
   )
 }
 

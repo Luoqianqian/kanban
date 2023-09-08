@@ -1,0 +1,35 @@
+
+
+@import "../node_modules/bootstrap/scss/functions";
+
+// my theme color
+$orange-dark: #e25c1a;
+$orange-light: #fb7c3c;
+$red-dark: #ed2217;
+$gray-blue: rgb(228, 235, 238);
+$gray-light:  rgb(245, 245, 245);
+$gray-md: rgb(155, 153, 153);
+
+$primary: $orange-dark;
+$secondary: $gray-blue;
+$danger: $red-dark;
+$info: $gray-light;
+
+// // my font size
+// $font-size-base: 1rem ; // Assumes the browser default, typically `16px`
+// $font-size-sm: $font-size-base * .875 !default;
+// $font-size-lg: $font-size-base * 1.25 !default;
+
+// $my-font-sizes: (
+//   7: $font-size-base,
+//   8: $font-size-sm,
+// );
+
+// $font-sizes: map-merge($font-sizes, $my-font-sizes );
+
+
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+// 
+@import './node_modules/bootstrap/scss/bootstrap';
