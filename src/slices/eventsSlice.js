@@ -37,8 +37,18 @@ export const eventsSlice = createSlice({
     },
     pushTask: (state, action) => {
       // eventIndex, tag, task
-      const {eventIndex, tag, task} = action.payload;
-      state[eventIndex][tag].push(task);
+      const {eventIndex, tag, task, index} = action.payload;
+      let {length} = action.payload;
+      console.log(length);
+      if(index >= length) {
+        state[eventIndex][tag].push(task);
+      } else {
+        while(length > index) {
+          state[eventIndex][tag][length] = state[eventIndex][tag][length-1];
+          length--;
+        }
+        state[eventIndex][tag][index] = task;
+      }
       localStorage.setItem('events', JSON.stringify(state));
     },
     deleteTask: (state, action) => {

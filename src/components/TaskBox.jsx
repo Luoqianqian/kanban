@@ -14,12 +14,15 @@ const TaskBox = () => {
 
   const onDragEnd = (result) => {
     const { source, destination, draggableId } = result;
-    console.log(destination);
+    console.log(result);
+    if(!destination) return;
+    if(destination.droppableId === source.droppableId && destination.index === source.index) return;
     const task = events[eventIndex][source.droppableId].find(item => item.id === draggableId);
+    const dLength = events[eventIndex][destination.droppableId].length;
     // remove task from source
     dispatch(deleteTask({eventIndex, tag: source.droppableId, id: draggableId}));
     // add task to destination
-    dispatch(pushTask({eventIndex, tag: destination?.droppableId, task}));
+    dispatch(pushTask({eventIndex, tag: destination?.droppableId, task, index: destination.index, length: dLength}));
   };
 
   const handleRemove = () => {
