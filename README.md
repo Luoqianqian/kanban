@@ -2,9 +2,8 @@
 
 Features
 
--  Draggable(faild)
--  Multi Event
--  Adding as many events as you like.
+-  Draggable
+-  bootstrap
 -  Use redux
 
 
@@ -12,5 +11,5 @@ Dependencies
 
 - React
 - react-beautiful-dnd
-- bootstrap
-- @redux/toolkit
+- bootstrap/react-bootstrap
+- redux @redux/toolkit
