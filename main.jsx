@@ -7,12 +7,11 @@ import store from './src/store';
 import { Provider } from 'react-redux';
 import { EventsContextProvider } from './src/context/currentEventContext';
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <EventsContextProvider>
-        <App />
-      </EventsContextProvider>
-    </Provider>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <EventsContextProvider>
+      <App />
+   </EventsContextProvider>
+  </Provider>
 )

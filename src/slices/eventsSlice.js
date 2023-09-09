@@ -36,8 +36,10 @@ export const eventsSlice = createSlice({
       localStorage.setItem('events', JSON.stringify(state));
     },
     pushTask: (state, action) => {
+      // eventIndex, tag, task
       const {eventIndex, tag, task} = action.payload;
       state[eventIndex][tag].push(task);
+      localStorage.setItem('events', JSON.stringify(state));
     },
     deleteTask: (state, action) => {
       // eventIndex, tag, task.id
